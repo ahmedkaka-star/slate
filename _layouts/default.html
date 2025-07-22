@@ -11,72 +11,14 @@
     <h1>🛡️ مرحبًا بك في الجدار السيبراني</h1>
     <p>نحميك من التهديدات الرقمية، ونبقيك في أمان دائم.</p>
   </header>
-
-  <section class="terms">
-    <h2>📋 شروط الاستخدام</h2>
-    <ul>
-      <li>💳 الاشتراك ضروري لتفعيل الحماية المتقدمة.</li>
-      <li>⚠️ اتبع التعليمات لتجنب الاختراق.</li>
-      <li>🔗 لا تفتح روابط مشبوهة بدون تحليل مسبق.</li>
-    </ul>
-  </section>
-
-  <section class="subscribe">
-    <button onclick="subscribe()">💳 اشترك الآن</button>
-  </section>
-
-  <section class="alerts">
-    <h2>🔔 التنبيهات</h2>
-    <button onclick="enableAlerts()">فعّل التنبيهات</button>
-  </section>
-
-  <section class="scanner">
-    <h2>🔗 فحص الروابط</h2>
-    <a href="scan.html">
-      <button>افحص رابط الآن</button>
-    </a>
-  </section>
-
-  <section class="contact">
-    <h2>📬 تواصل معنا</h2>
-    <form id="contact-form">
-      <input type="text" placeholder="اسمك" required>
-      <input type="email" placeholder="بريدك الإلكتروني" required>
-      <textarea placeholder="رسالتك" required></textarea>
-      <button type="submit">إرسال</button>
-    </form>
-  </section>
-
+<a href="scan.html"><button>🔗 فحص الروابط</button></a>
+<a href="login.html"><button>🔐 تسجيل الدخول</button></a>
+<a href="learn.html"><button>📚 تعلم الأمن السيبراني</button></a>
+<a href="subscribe.html"><button>💳 إدارة الاشتراك</button></a>
+<a href="admin.html"><button>🧠 لوحة تحكم المسؤول</button></a>
+<a href="alerts.html"><button>🔔 التنبيهات المباشرة</button></a>
   <footer>
     <p>© 2025 الجدار السيبراني | CyberWall</p>
   </footer>
-
-  <script>
-    function subscribe() {
-      alert("🚀 سيتم تحويلك إلى بوابة الاشتراك... العملية آمنة.");
-    }
-
-    function enableAlerts() {
-      Notification.requestPermission().then(permission => {
-        if (permission === "granted") {
-          new Notification("🎉 تم تفعيل التنبيهات! سننبهك عند وجود خطر.");
-        } else {
-          alert("يرجى السماح بالتنبيهات من إعدادات المتصفح.");
-        }
-      });
-    }
-
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert("✅ تم إرسال رسالتك! شكراً لتواصلك معنا.");
-    });
-  </script>
 </body>
 </html>
-<link rel="stylesheet" href="style.css">
-<section class="scanner">
-  <h2>🔗 فحص الروابط</h2>
-  <a href="scan.html">
-    <button>افحص رابط الآن</button>
-  </a>
-</section>
