@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>فحص الروابط | CyberWall</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🔍 فحص الروابط المشبوهة</h1>
+    <p>أدخل الرابط لتحليله والتأكد من سلامته.</p>
+  </header>
+
+  <section>
+    <form id="scan-form">
+      <input type="url" placeholder="أدخل الرابط هنا" required>
+      <button type="submit">فحص</button>
+    </form>
+  </section>
+
+  <section id="result" style="padding: 20px;"></section>
+
+  <footer>
+    <p>© 2025 الجدار السيبراني | CyberWall</p>
+  </footer>
+
+  <script>
+    document.getElementById('scan-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const url = e.target.querySelector('input').value;
+      const result = document.getElementById('result');
+
+      if (url.includes("http")) {
+        result.innerHTML = `<p>✅ الرابط يبدو آمنًا: ${url}</p>`;
+      } else {
+        result.innerHTML = `<p>⚠️ الرابط غير صالح أو مشبوه: ${url}</p>`;
+      }
+    });
+  </script>
+</body>
+</html>
+<link rel="stylesheet" href="style.css">
+<a href="index.html">
+  <button>🔙 رجوع إلى الصفحة الرئيسية</button>
+</a>
