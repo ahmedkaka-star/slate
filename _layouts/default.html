@@ -1,52 +1,70 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>مشروع مراسل للأمن السيبراني | CyberGuard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🛡️ مرحبًا بك في مشروع مراسل للأمن السيبراني</h1>
+    <p>احمِ نفسك من المخاطر الرقمية وكن دائمًا على اطلاع!</p>
+    <h1>🛡️ Welcome to Marassel Cybersecurity Project</h1>
+    <p>Protect yourself from digital threats and stay informed!</p>
+  </header>
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,maximum-scale=2">
-    <link rel="stylesheet" type="text/css" media="screen" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  <section class="terms">
+    <h2>📋 شروط الاستخدام / Terms of Use</h2>
+    <ul>
+      <li>💳 الدفع ضروري لتفعيل الحماية المتقدمة. <br> Payment is required to activate advanced protection.</li>
+      <li>⚠️ يجب اتباع التعليمات لتجنب الاختراق. <br> Follow instructions to avoid being hacked.</li>
+      <li>🔗 لا تفتح روابط مشبوهة بدون تحليل. <br> Do not open suspicious links without analysis.</li>
+    </ul>
+  </section>
 
-{% seo %}
-    {% include head-custom.html %}
-  </head>
+  <section class="subscribe">
+    <button onclick="subscribe()">💳 اشترك الآن / Subscribe Now</button>
+  </section>
 
-  <body>
+  <section class="alerts">
+    <h2>🔔 التنبيهات / Notifications</h2>
+    <button onclick="enableAlerts()">فعّل التنبيهات / Enable Alerts</button>
+  </section>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          {% if site.github.is_project_page %}
-            <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
-          {% endif %}
+  <section class="contact">
+    <h2>📬 تواصل معنا / Contact Us</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="اسمك / Your Name" required>
+      <input type="email" placeholder="بريدك الإلكتروني / Your Email" required>
+      <textarea placeholder="رسالتك / Your Message" required></textarea>
+      <button type="submit">إرسال / Send</button>
+    </form>
+  </section>
 
-          <h1 id="project_title">{{ site.title | default: site.github.repository_name }}</h1>
-          <h2 id="project_tagline">{{ site.description | default: site.github.project_tagline }}</h2>
+  <footer>
+    <p>© 2025 مشروع مراسل للأمن السيبراني | Marassel Cybersecurity Project</p>
+  </footer>
 
-          {% if site.show_downloads %}
-            <section id="downloads">
-              <a class="zip_download_link" href="{{ site.github.zip_url }}">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="{{ site.github.tar_url }}">Download this project as a tar.gz file</a>
-            </section>
-          {% endif %}
-        </header>
-    </div>
+  <script>
+    function subscribe() {
+      alert("🚀 سيتم تحويلك إلى بوابة الاشتراك... العملية آمنة.");
+    }
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        {{ content }}
-      </section>
-    </div>
+    function enableAlerts() {
+      Notification.requestPermission().then(permission => {
+        if (permission === "granted") {
+          new Notification("🎉 تم تفعيل التنبيهات! سننبهك عند وجود خطر.");
+        } else {
+          alert("يرجى السماح بالتنبيهات من إعدادات المتصفح.");
+        }
+      });
+    }
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        {% if site.github.is_project_page %}
-        <p class="copyright">{{ site.title | default: site.github.repository_name }} maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-  </body>
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert("✅ تم إرسال رسالتك! شكراً لتواصلك معنا.");
+    });
+  </script>
+</body>
 </html>
