@@ -21,6 +21,10 @@
 
   <section id="result" style="padding: 20px;"></section>
 
+  <section>
+    <a href="index.html"><button>🔙 رجوع إلى الصفحة الرئيسية</button></a>
+  </section>
+
   <footer>
     <p>© 2025 الجدار السيبراني | CyberWall</p>
   </footer>
@@ -30,17 +34,13 @@
       e.preventDefault();
       const url = e.target.querySelector('input').value;
       const result = document.getElementById('result');
-
       if (url.includes("http")) {
-        result.innerHTML = `<p>✅ الرابط يبدو آمنًا: ${url}</p>`;
+        result.innerHTML = `<p>✅ الرابط آمن: ${url}</p>`;
       } else {
-        result.innerHTML = `<p>⚠️ الرابط غير صالح أو مشبوه: ${url}</p>`;
+        result.innerHTML = `<p>⚠️ الرابط مشبوه: ${url}</p>`;
       }
     });
   </script>
 </body>
 </html>
-<link rel="stylesheet" href="style.css">
-<a href="index.html">
-  <button>🔙 رجوع إلى الصفحة الرئيسية</button>
-</a>
+<a href="index.html"><button>🔙 رجوع إلى الصفحة الرئيسية</button></a>
