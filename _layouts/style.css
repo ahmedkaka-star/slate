@@ -1,84 +1,41 @@
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #0f172a;
-  color: #f1f5f9;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تسجيل الدخول | CyberWall</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🔐 تسجيل الدخول إلى الجدار السيبراني</h1>
+    <p>أدخل بياناتك لتفعيل الحماية الشخصية.</p>
+  </header>
 
-header {
-  background-color: #1e293b;
-  padding: 20px;
-  text-align: center;
-  border-bottom: 2px solid #334155;
-}
+  <section>
+    <form id="login-form">
+      <input type="text" placeholder="اسم المستخدم" required>
+      <input type="password" placeholder="كلمة المرور" required>
+      <button type="submit">تسجيل الدخول</button>
+    </form>
+  </section>
 
-header h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
+  <section id="login-result" style="padding: 20px;"></section>
 
-header p {
-  font-size: 16px;
-  color: #cbd5e1;
-}
+  <section>
+    <a href="index.html"><button>🔙 رجوع إلى الصفحة الرئيسية</button></a>
+  </section>
 
-section {
-  padding: 20px;
-  border-bottom: 1px solid #334155;
-}
+  <footer>
+    <p>© 2025 الجدار السيبراني | CyberWall</p>
+  </footer>
 
-section h2 {
-  color: #38bdf8;
-  margin-bottom: 10px;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  background-color: #1e293b;
-  margin-bottom: 10px;
-  padding: 10px;
-  border-radius: 6px;
-}
-
-button {
-  background-color: #0ea5e9;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin-top: 10px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #0284c7;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-input, textarea {
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-  background-color: #1e293b;
-  color: white;
-}
-
-footer {
-  background-color: #1e293b;
-  text-align: center;
-  padding: 10px;
-  font-size: 14px;
-  color: #94a3b8;
-}
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('login-result').innerHTML = `<p>✅ تم تسجيل الدخول بنجاح (وهميًا).</p>`;
+    });
+  </script>
+</body>
+</html>
+      <a href="index.html"><button>🔙 رجوع إلى الصفحة الرئيسية</button></a>
