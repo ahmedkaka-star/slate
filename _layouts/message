@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>استقبال الرسائل | CyberWall</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📬 مركز الرسائل</h1>
+    <p>يمكنك إرسال ملاحظاتك أو استفساراتك هنا وسيتم الرد عليك قريبًا.</p>
+  </header>
+
+  <section>
+    <form id="message-form">
+      <input type="text" placeholder="الاسم الكامل" required>
+      <input type="email" placeholder="البريد الإلكتروني" required>
+      <textarea placeholder="اكتب رسالتك هنا..." required></textarea>
+      <button type="submit">📨 إرسال الرسالة</button>
+    </form>
+  </section>
+
+  <section id="reply" style="padding: 20px;"></section>
+
+  <section>
+    <a href="index.html"><button>🔙 رجوع إلى الصفحة الرئيسية</button></a>
+  </section>
+
+  <footer>
+    <p>© 2025 الجدار السيبراني | CyberWall</p>
+  </footer>
+
+  <script>
+    document.getElementById('message-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('reply').innerHTML = `
+        <p>✅ تم استلام رسالتك بنجاح. سنقوم بمراجعتها والرد عليك قريبًا.</p>
+      `;
+    });
+  </script>
+</body>
+</html>
